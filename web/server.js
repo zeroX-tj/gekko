@@ -8,6 +8,8 @@ const bodyParser = require('koa-bodyparser');
 
 const opn = require('opn');
 const server = require('http').createServer();
+// Disable timeout for large/long running backtests
+server.setTimeout(0);
 const router = require('koa-router')();
 const ws = require('ws');
 const app = koa();
